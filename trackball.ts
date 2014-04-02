@@ -9,12 +9,12 @@ class Trackball {
     private oldRotation: THREE.Quaternion;
     private dragStartPos: THREE.Vector3;
 
-    constructor(camera: THREE.Camera, element: HTMLElement) {
+    constructor(camera: THREE.Camera, element: HTMLElement, startQuaternion: THREE.Quaternion) {
         this.camera = camera;
         this.element = element;
 
-        this.oldRotation = new THREE.Quaternion(0, 0, 0, 1);
-        this.currentRotation = new THREE.Quaternion(0, 0, 0, 1);
+        this.oldRotation = startQuaternion;
+        this.currentRotation = startQuaternion;
         this.dragStartPos = new THREE.Vector3(0, 0, 0);
 
         // Setup event listeners
@@ -66,7 +66,7 @@ class Trackball {
             p.z = Math.sqrt(1 - p.lengthSq());
         }
         else {
-            p.z = 1.0 / (2 * Math.sqrt(p.lengthSq()));
+            p.z = 1.0 / (2 * p.length());
             p.normalize();
         }
 
