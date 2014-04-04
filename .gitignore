@@ -155,4 +155,4 @@ $RECYCLE.BIN/
 *.js
 *.js.map
 !scripts/*.js
-!envs/*
+!examples/**/*
