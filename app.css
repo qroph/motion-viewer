@@ -1,0 +1,13 @@
+﻿body {
+    background-color: #eeeeee;
+}
+
+div {
+    width: 800px;
+}
+
+#content {
+    border: 1px solid black;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}

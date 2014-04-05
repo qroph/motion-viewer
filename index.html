@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Viewer</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <script src="scripts/three.min.js"></script>
+    <script src="viewer.js"></script>
+</head>
+<body>
+    <h1>Motion Planning</h1>
+    <div>
+        <p>
+            This page demonstrates a motion planning problem. There are three example environments and each of them contains one robot and obstacles. The robot is shown in red while the obstacles are shown in grey. The robot moves continuously between two predetermined locations without colliding with the obstacles. Collision-free paths were calculated with <a href="https://github.com/qroph/motion-solver">motion-solver</a> software.
+        </p>
+        <p>
+            The visualizer requires a browser that supports WebGL. The shown environment can be changed with a combo box and the camera can be rotated with a mouse.
+        </p>
+    </div>
+    <select id="combo">
+        <option value="asteroids">Asteroids environment</option>
+        <option value="house">House environment</option>
+        <option value="wall">Wall environment</option>
+    </select>
+    <br>
+    <canvas id="content" />
+</body>
+</html>
